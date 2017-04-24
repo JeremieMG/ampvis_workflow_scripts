@@ -66,6 +66,8 @@ echo "Dereplicating reads"
 perl 16S-analysis/scripts/uparse.to.dereplicate.pl -i merged_ls.fasta -o uniques.fa -r reads.fa
 date
 
+#Download fasta_number: wget http://drive5.com/python/python_scripts.tar.gz
+
 echo ""
 echo "Clustering into OTUs"
 ./vsearch-2.4.3-macos-x86_64/bin/vsearch --cluster_fast uniques.fa --centroids otus.fa --quiet
