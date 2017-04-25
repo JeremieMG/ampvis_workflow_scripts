@@ -8,17 +8,17 @@ echo "Finding your samples and copying them to the current folder"
 
 #Just write in a text file (ref: samples) your samples prefix-names (ex: SRR1656520 from SRR1656520_R1.fastq), separate by a new-line
 
-while read samples
+while read data/samples
 do
 a="_" ;
 NAME=$samples$a ;
-head -n 1 $NAME*R1* | sed 's/\@/>/' >> id.txt ;
-head -n 200000 $NAME*R1* >> forward.fastq
-head -n 200000 $NAME*R2* >> reverse.fastq
+head -n 1 data/$NAME*1* | sed 's/\@/>/' >> id.txt ;
+head -n data/200000 $NAME*1* >> forward.fastq
+head -n data/200000 $NAME*2* >> reverse.fastq
 gzip $NAME*R1* ; 
-done < samples
+done < data/samples
 
-paste -d "\t" id.txt samples > sampleid.txt
+paste -d "\t" id.txt data/samples > sampleid.txt
 date
 
 echo ""
