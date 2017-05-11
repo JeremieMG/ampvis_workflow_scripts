@@ -29,8 +29,8 @@ qsub queue_script.sh
 ```
 
 ### Informations about this queue script:
-QQIME is not a module loaded on the server, it was installed from MiniConda.
-Remove the next commands if qiime is working on a module:
+QIIME is not a module loaded on the server, it was installed from MiniConda.
+Remove the next commands if QIIME is working on a module:
 ```
 source activate/deactivate qiime1
 ```
