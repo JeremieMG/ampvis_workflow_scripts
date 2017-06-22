@@ -69,8 +69,8 @@ date
 
 #Download fasta_number: wget http://drive5.com/python/python_scripts.tar.gz
 
-#/!\ /!\ /!\ /!\ /!\ /!\ Change the name of the otus_file each time you run this script /!\ /!\ /!\ /!\ /!\ /!\
-otus_file=the_hope
+
+otus_file=otus
 
 echo ""
 echo "Clustering into OTUs"
